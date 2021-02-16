@@ -1,5 +1,5 @@
 from searchtweets import ResultStream, gen_request_parameters, load_credentials
-import csv,sys
+import csv,sys,json
 
 headers = ["id","text", "created_at" , "geo", "in_reply_to_user_id" , "lang", "author_id", "conversation_id", "public_metrics", "entities", "context_annotations"]
 
@@ -21,7 +21,7 @@ def search(queryString, outputpath, api_key_yaml,startTime="2016-01-01",endTime=
                 writer.writerow(createRow(headers, tweet))
 
 def createRow(headers, tweet):
-    return [tweet[head] if head in tweet else None for head in headers]
+    return [json.dumps(tweet[head]) if head in tweet else None for head in headers]
 
 if __name__ == "__main__":
     query = sys.argv[1]
