@@ -1,15 +1,15 @@
 from searchtweets import ResultStream, gen_request_parameters, load_credentials
 import csv,sys
 
-headers = ["id","text", "created_at" , "geo", "in_reply_to_user_id" , "lang", "author_id", "conversation_id", "public_metrics", "entities"]
+headers = ["id","text", "created_at" , "geo", "in_reply_to_user_id" , "lang", "author_id", "conversation_id", "public_metrics", "entities", "context_annotations","attachments", "non_public_metrics","organic_metrics","possiby_sensitive","promoted_metrics","referenced_tweets","reply_settings","source","withheld"]
 
 def search(queryString, outputpath, api_key_yaml,startTime="2016-01-01",endTime="2021-02-11"):
 
     search_args = load_credentials(api_key_yaml,
                                    yaml_key="search_tweets_v2",
-                                   env_overwrite=False) 
+                                   env_overwrite=False)         
 
-    query = gen_request_parameters(query=queryString + " -is:retweet", tweet_fields="id,text,created_at,geo,in_reply_to_user_id,lang,author_id,conversation_id,public_metrics,entities",start_time=startTime,end_time=endTime, stringify=False, results_per_call=500)
+    query = gen_request_parameters(query=queryString + " -is:retweet", tweet_fields="id,text,created_at,geo,in_reply_to_user_id,lang,author_id,conversation_id,public_metrics,entities,context_annotations,attachments,non_public_metrics,organic_metrics,possiby_sensitive,promoted_metrics,referenced_tweets,reply_settings,source,withheld",start_time=startTime,end_time=endTime, stringify=False, results_per_call=500)
 
     rs = ResultStream(request_parameters=query, max_tweets=sys.maxsize, max_requests=sys.maxsize, **search_args)
 
