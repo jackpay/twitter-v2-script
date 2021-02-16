@@ -9,7 +9,7 @@ def search(queryString, outputpath, api_key_yaml,startTime="2016-01-01",endTime=
                                    yaml_key="search_tweets_v2",
                                    env_overwrite=False)         
 
-    query = gen_request_parameters(query=queryString + " -is:retweet", tweet_fields="id,text,created_at,geo,in_reply_to_user_id,lang,author_id,conversation_id,public_metrics,entities,context_annotations",start_time=startTime,end_time=endTime, stringify=False, results_per_call=500)
+    query = gen_request_parameters(query=queryString + " -is:retweet -is:verified -is:quote", tweet_fields="id,text,created_at,geo,in_reply_to_user_id,lang,author_id,conversation_id,public_metrics,entities,context_annotations",start_time=startTime,end_time=endTime, stringify=False, results_per_call=500)
 
     rs = ResultStream(request_parameters=query, max_tweets=sys.maxsize, max_requests=sys.maxsize, **search_args)
 
