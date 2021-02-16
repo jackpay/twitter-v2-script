@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="330219af-ff50-4975-90ed-aba71d93a3cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seaching/search_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/seaching/search_funcs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/seaching/search_funcs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="3" column="224" selection-start-line="3" selection-start-column="224" selection-end-line="3" selection-end-column="224" />
+              <caret line="3" column="162" lean-forward="true" selection-start-line="3" selection-start-column="162" selection-end-line="3" selection-end-column="162" />
             </state>
           </provider>
         </entry>
@@ -181,7 +180,7 @@
     <entry file="file://$PROJECT_DIR$/seaching/search_funcs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="3" column="224" selection-start-line="3" selection-start-column="224" selection-end-line="3" selection-end-column="224" />
+          <caret line="3" column="162" lean-forward="true" selection-start-line="3" selection-start-column="162" selection-end-line="3" selection-end-column="162" />
         </state>
       </provider>
     </entry>
